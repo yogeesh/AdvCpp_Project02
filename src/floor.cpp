@@ -8,32 +8,24 @@ Floor<T>::Floor(unsigned int number):
 
 template <typename T>
 const T& Floor<T>::back(Direction dir) const throw(TTException){
-    if(dir == WEST) {
-        if(size(dir) == 0)
-            throw TTException("Queue is empty");
-        else
-            return west_.back();
-    }
+    if(size(dir) == 0)
+        throw TTException("Queue is empty");
+
+    if(dir == WEST)
+        return west_.back();
     else
-        if(size(dir) == 0)
-            throw TTException("Queue is empty");
-        else
-            return east_.back();
+        return east_.back();
 }
 
 template <typename T>
 const T& Floor<T>::front(Direction dir) const throw(TTException){
-    if(dir == WEST) {
-        if (size(dir) == 0)
-            throw TTException("Queue is empty");
-        else
-            return west_.front();
-    }
+    if (size(dir) == 0)
+        throw TTException("Queue is empty");
+
+    if(dir == WEST)
+        return west_.front();
     else
-        if(size(dir) == 0)
-            throw TTException("Queue is empty");
-        else
-            return east_.front();
+        return east_.front();
 }
 
 template <typename T>
@@ -46,17 +38,13 @@ void Floor<T>::insert(const T &element, Direction dir){
 
 template <typename T>
 void Floor<T>::remove(Direction dir) throw(TTException){
-    if( dir == WEST) {
-        if (size(dir) == 0)
-            throw TTException("Queue is empty");
-        else
-            west_.pop_front();
-    }
+    if (size(dir) == 0)
+        throw TTException("Queue is empty");
+
+    if( dir == WEST)
+        west_.pop_front();
     else
-        if(size(dir) == 0)
-            throw TTException("Queue is empty");
-        else
-            east_.pop_front();
+        east_.pop_front();
 }
 
 template <typename T>
@@ -72,11 +60,6 @@ unsigned int Floor<T>::number() const{
     return number_;
 }
 
-//bool checkEmptyQueue_(std::deque que) const{
-//    if(que.size() == 0)
-//        return true;
-//    return false;
-//}
 
 template class Floor<int>;
 template class Floor<std::string>;
