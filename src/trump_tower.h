@@ -8,7 +8,7 @@ public:
     static const int SEED = 0;
     static const unsigned int ENENY_FLOOR = 13;
 
-    TrumpTower (unsigned long numSJWs, unsigned long numReporters,
+    TrumpTower(unsigned long numSJWs, unsigned long numReporters,
                 unsigned long numCentipedes, unsigned long numPoliticians,
                 unsigned long numMissUniverses);
 
@@ -17,6 +17,11 @@ public:
     void action();
 
 private:
+    unsigned long numSJWs_;
+    unsigned long numReporters_;
+    unsigned long numCentipedes_;
+    unsigned long numPoliticians_;
+    unsigned long numMissUniverses_;
 
 };
 
