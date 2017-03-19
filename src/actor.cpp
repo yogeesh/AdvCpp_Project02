@@ -19,4 +19,4 @@ Actor::ActorType Actor::type() const{
 }
 
 //virtual std::string Actor::victory(const Actor &other) const {}
-// virtual std::string Actor::defeat(const Actor &other) const {}
+//virtual std::string Actor::defeat(const Actor &other) const {}

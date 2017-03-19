@@ -1,12 +1,12 @@
-#ifndef PROJECT1_THE_DONALD_H
-#define PROJECT1_THE_DONALD_H
+#ifndef PROJECT1_CENTIPEDE_H
+#define PROJECT1_CENTIPEDE_H
 
 #include "actor.h"
 
-class TheDonald : public Actor{
+class Centipede : public Actor{
 
 public:
-    TheDonald(unsigned int id);
+    Centipede(unsigned int id);
 
     virtual std::string victory(const Actor &other) const;
 
@@ -16,8 +16,7 @@ public:
 
 private:
 
-
 };
 
 
-#endif //PROJECT1_THE_DONALD_H
+#endif //PROJECT1_CENTIPEDE_H

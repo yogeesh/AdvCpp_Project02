@@ -2,6 +2,18 @@
 #ifndef PROJECT1_TRUMP_TOWER_H
 #define PROJECT1_TRUMP_TOWER_H
 
+#include <queue>
+#include <set>
+#include <stack>
+#include <deque>
+#include "actor.h"
+#include "centipede.h"
+#include "floor.h"
+#include "miss_universe.h"
+#include "politician.h"
+#include "reporter.h"
+#include "rng.h"
+#include "sjw.h"
 
 class TrumpTower{
 public:
