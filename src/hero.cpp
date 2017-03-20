@@ -6,7 +6,8 @@ Hero::Hero(const std::string &name, unsigned int id, Actor::ActorType type):
         Actor(name, id, type){}
 
 bool Hero::defend(const Actor &other) const {
-
+    if( other )
+    RNG::roll_dice(name(), other.name(), )
 }
 
 static const int Hero::CHANCE_TO_BEAT_CENTIPEDE = 90;

@@ -6,7 +6,7 @@
 #include "tt_exception.h"
 
 template <typename T>
-class Floor{
+class Floor<T>{
 public:
     Floor(unsigned int number);
 

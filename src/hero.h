@@ -3,7 +3,7 @@
 
 #include "actor.h"
 
-class Hero{
+class Hero : public Actor{
 
 public:
     Hero(const std::string &name, unsigned int id, Actor::ActorType type);

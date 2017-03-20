@@ -17,8 +17,8 @@
 
 class TrumpTower{
 public:
-    static const int SEED = 0;
-    static const unsigned int ENENY_FLOOR = 13;
+    static const int SEED;
+    static const unsigned int ENENY_FLOOR;
 
     TrumpTower(unsigned long numSJWs, unsigned long numReporters,
                 unsigned long numCentipedes, unsigned long numPoliticians,
@@ -34,6 +34,20 @@ private:
     unsigned long numCentipedes_;
     unsigned long numPoliticians_;
     unsigned long numMissUniverses_;
+
+    unsigned long sjwId_;
+    unsigned long reporterId_;
+    unsigned long centipededsId_;
+    unsigned long politiciansId_;
+    unsigned long missUniverseId_;
+
+    std::deque<SJW*> sjw_;
+    std::stack<Reporter*> reporter_;
+    std::set wahmbulance_;
+    std::set choppa_;
+    Floor<Actor*> enemy_;
+
+    void buildTrumpTower_();
 
 };
 
