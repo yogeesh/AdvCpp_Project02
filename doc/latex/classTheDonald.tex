@@ -1,0 +1,121 @@
+\hypertarget{classTheDonald}{}\section{The\+Donald Class Reference}
+\label{classTheDonald}\index{The\+Donald@{The\+Donald}}
+
+
+{\ttfamily \#include $<$the\+\_\+donald.\+h$>$}
+
+
+
+Inheritance diagram for The\+Donald\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classTheDonald__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for The\+Donald\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classTheDonald__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTheDonald_a3e3d985e27af763356a7936d8bf190d8}{The\+Donald} (unsigned int \hyperlink{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}{id})
+\item 
+\hyperlink{classTheDonald_a0c0193bf480aceaaebc3598da56409e8}{$\sim$\+The\+Donald} ()
+\item 
+virtual std\+::string \hyperlink{classTheDonald_abee1d5bb4910c657ffd41fc745298cdc}{victory} (const \hyperlink{classActor}{Actor} \&other) const 
+\item 
+virtual std\+::string \hyperlink{classTheDonald_ac6920f6026c3b0d91afbce90f6f07fad}{defeat} (const \hyperlink{classActor}{Actor} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{classTheDonald_a5524e0abfd4ea1eb4f22f526f4583732}{N\+A\+ME} = \char`\"{}The Donald\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Donal is one of the main actor 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{The\+Donald@{The\+Donald}!The\+Donald@{The\+Donald}}
+\index{The\+Donald@{The\+Donald}!The\+Donald@{The\+Donald}}
+\subsubsection[{\texorpdfstring{The\+Donald(unsigned int id)}{TheDonald(unsigned int id)}}]{\setlength{\rightskip}{0pt plus 5cm}The\+Donald\+::\+The\+Donald (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\hypertarget{classTheDonald_a3e3d985e27af763356a7936d8bf190d8}{}\label{classTheDonald_a3e3d985e27af763356a7936d8bf190d8}
+create new donald 
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: donald\textquotesingle{}s actor id \\
+\hline
+\end{DoxyParams}
+\index{The\+Donald@{The\+Donald}!````~The\+Donald@{$\sim$\+The\+Donald}}
+\index{````~The\+Donald@{$\sim$\+The\+Donald}!The\+Donald@{The\+Donald}}
+\subsubsection[{\texorpdfstring{$\sim$\+The\+Donald()}{~TheDonald()}}]{\setlength{\rightskip}{0pt plus 5cm}The\+Donald\+::$\sim$\+The\+Donald (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTheDonald_a0c0193bf480aceaaebc3598da56409e8}{}\label{classTheDonald_a0c0193bf480aceaaebc3598da56409e8}
+Destrctr for donald 
+
+\subsection{Member Function Documentation}
+\index{The\+Donald@{The\+Donald}!defeat@{defeat}}
+\index{defeat@{defeat}!The\+Donald@{The\+Donald}}
+\subsubsection[{\texorpdfstring{defeat(const Actor \&other) const }{defeat(const Actor &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string The\+Donald\+::defeat (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTheDonald_ac6920f6026c3b0d91afbce90f6f07fad}{}\label{classTheDonald_ac6920f6026c3b0d91afbce90f6f07fad}
+message for Donald defeat over other actor 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: opponent actor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: message for defeat 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classActor_a0405c30d4ad11809647d2bf4e78026a7}{Actor}.
+
+\index{The\+Donald@{The\+Donald}!victory@{victory}}
+\index{victory@{victory}!The\+Donald@{The\+Donald}}
+\subsubsection[{\texorpdfstring{victory(const Actor \&other) const }{victory(const Actor &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string The\+Donald\+::victory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classTheDonald_abee1d5bb4910c657ffd41fc745298cdc}{}\label{classTheDonald_abee1d5bb4910c657ffd41fc745298cdc}
+message for Donald victory over other actor 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: opponent actor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: message for victory 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classActor_a1595ffb3d753120a9e74eac0bd69adf1}{Actor}.
+
+
+
+\subsection{Member Data Documentation}
+\index{The\+Donald@{The\+Donald}!N\+A\+ME@{N\+A\+ME}}
+\index{N\+A\+ME@{N\+A\+ME}!The\+Donald@{The\+Donald}}
+\subsubsection[{\texorpdfstring{N\+A\+ME}{NAME}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string The\+Donald\+::\+N\+A\+ME = \char`\"{}The Donald\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTheDonald_a5524e0abfd4ea1eb4f22f526f4583732}{}\label{classTheDonald_a5524e0abfd4ea1eb4f22f526f4583732}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{the__donald_8h}{the\+\_\+donald.\+h}\item 
+src/\hyperlink{the__donald_8cpp}{the\+\_\+donald.\+cpp}\end{DoxyCompactItemize}

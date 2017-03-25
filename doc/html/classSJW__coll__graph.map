@@ -1,0 +1,4 @@
+<map id="SJW" name="SJW">
+<area shape="rect" id="node2" href="$classHero.html" title="{Hero\n|+ CHANCE_TO_BEAT_CENTIPEDE\l+ CHANCE_TO_BEAT_POLITICIAN\l+ CHANCE_TO_BEAT_MISS\l_UNIVERSE\l+ CHANCE_TO_BEAT_THE\l_DONALD\l|+ Hero()\l+ ~Hero()\l+ defend()\l}" alt="" coords="5,219,249,399"/>
+<area shape="rect" id="node3" href="$classActor.html" title="{Actor\n||+ Actor()\l+ ~Actor()\l+ name()\l+ id()\l+ type()\l+ victory()\l+ defeat()\l}" alt="" coords="87,5,168,171"/>
+</map>

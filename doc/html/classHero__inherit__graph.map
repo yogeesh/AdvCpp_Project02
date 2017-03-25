@@ -1,0 +1,5 @@
+<map id="Hero" name="Hero">
+<area shape="rect" id="node3" href="$classReporter.html" title="{Reporter\n|+ NAME\l|+ Reporter()\l+ ~Reporter()\l+ victory()\l+ defeat()\l}" alt="" coords="20,447,120,568"/>
+<area shape="rect" id="node4" href="$classSJW.html" title="{SJW\n|+ NAME\l|+ SJW()\l+ ~SJW()\l+ victory()\l+ defeat()\l}" alt="" coords="144,447,225,568"/>
+<area shape="rect" id="node2" href="$classActor.html" title="{Actor\n||+ Actor()\l+ ~Actor()\l+ name()\l+ id()\l+ type()\l+ victory()\l+ defeat()\l}" alt="" coords="87,5,168,171"/>
+</map>

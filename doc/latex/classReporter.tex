@@ -1,0 +1,121 @@
+\hypertarget{classReporter}{}\section{Reporter Class Reference}
+\label{classReporter}\index{Reporter@{Reporter}}
+
+
+{\ttfamily \#include $<$reporter.\+h$>$}
+
+
+
+Inheritance diagram for Reporter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classReporter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Reporter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classReporter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classReporter_a7cfd771737b90ff52c361c1c898a8b6f}{Reporter} (unsigned int \hyperlink{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}{id})
+\item 
+\hyperlink{classReporter_acbacf4155d5fe9e4a8e833d785e76880}{$\sim$\+Reporter} ()
+\item 
+virtual std\+::string \hyperlink{classReporter_ac0c496d5f8f3f56c71d2afe6ab53490e}{victory} (const \hyperlink{classActor}{Actor} \&other) const 
+\item 
+virtual std\+::string \hyperlink{classReporter_a6147cf4ee48d5c81e72538d39c79d228}{defeat} (const \hyperlink{classActor}{Actor} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{classReporter_a0e02a11312453ea2ad20cbcf32df478d}{N\+A\+ME} = \char`\"{}Reporter\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+All Reporters are basically \hyperlink{classHero}{Hero}\textquotesingle{}s 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Reporter@{Reporter}!Reporter@{Reporter}}
+\index{Reporter@{Reporter}!Reporter@{Reporter}}
+\subsubsection[{\texorpdfstring{Reporter(unsigned int id)}{Reporter(unsigned int id)}}]{\setlength{\rightskip}{0pt plus 5cm}Reporter\+::\+Reporter (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classReporter_a7cfd771737b90ff52c361c1c898a8b6f}{}\label{classReporter_a7cfd771737b90ff52c361c1c898a8b6f}
+create new reporter 
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: reporter actor id \\
+\hline
+\end{DoxyParams}
+\index{Reporter@{Reporter}!````~Reporter@{$\sim$\+Reporter}}
+\index{````~Reporter@{$\sim$\+Reporter}!Reporter@{Reporter}}
+\subsubsection[{\texorpdfstring{$\sim$\+Reporter()}{~Reporter()}}]{\setlength{\rightskip}{0pt plus 5cm}Reporter\+::$\sim$\+Reporter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classReporter_acbacf4155d5fe9e4a8e833d785e76880}{}\label{classReporter_acbacf4155d5fe9e4a8e833d785e76880}
+Destructor for \hyperlink{classReporter}{Reporter} 
+
+\subsection{Member Function Documentation}
+\index{Reporter@{Reporter}!defeat@{defeat}}
+\index{defeat@{defeat}!Reporter@{Reporter}}
+\subsubsection[{\texorpdfstring{defeat(const Actor \&other) const }{defeat(const Actor &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Reporter\+::defeat (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classReporter_a6147cf4ee48d5c81e72538d39c79d228}{}\label{classReporter_a6147cf4ee48d5c81e72538d39c79d228}
+message for reporter defeat over other actor 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: opponent actor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: message for defeat 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classActor_a0405c30d4ad11809647d2bf4e78026a7}{Actor}.
+
+\index{Reporter@{Reporter}!victory@{victory}}
+\index{victory@{victory}!Reporter@{Reporter}}
+\subsubsection[{\texorpdfstring{victory(const Actor \&other) const }{victory(const Actor &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Reporter\+::victory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classReporter_ac0c496d5f8f3f56c71d2afe6ab53490e}{}\label{classReporter_ac0c496d5f8f3f56c71d2afe6ab53490e}
+message for reporter victory over other actor 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: opponent actor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: message for victory 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classActor_a1595ffb3d753120a9e74eac0bd69adf1}{Actor}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Reporter@{Reporter}!N\+A\+ME@{N\+A\+ME}}
+\index{N\+A\+ME@{N\+A\+ME}!Reporter@{Reporter}}
+\subsubsection[{\texorpdfstring{N\+A\+ME}{NAME}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Reporter\+::\+N\+A\+ME = \char`\"{}Reporter\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classReporter_a0e02a11312453ea2ad20cbcf32df478d}{}\label{classReporter_a0e02a11312453ea2ad20cbcf32df478d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{reporter_8h}{reporter.\+h}\item 
+src/\hyperlink{reporter_8cpp}{reporter.\+cpp}\end{DoxyCompactItemize}

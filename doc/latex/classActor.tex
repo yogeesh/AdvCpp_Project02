@@ -1,0 +1,187 @@
+\hypertarget{classActor}{}\section{Actor Class Reference}
+\label{classActor}\index{Actor@{Actor}}
+
+
+{\ttfamily \#include $<$actor.\+h$>$}
+
+
+
+Inheritance diagram for Actor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classActor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Actor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classActor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classActor_a398752837eee9970ca00a3565e52c4da}{Actor\+Type} \{ \\*
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4daaca4c443e9d37143364c2760158033d08}{C\+E\+N\+T\+I\+P\+E\+DE}, 
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4daacf7f8a23b2a3995ab6777cb142cec6dc}{M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE}, 
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4daa7c3965a675a848e7e3d0c28a9218e20a}{P\+O\+L\+I\+T\+I\+C\+I\+AN}, 
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4daa2911d77bb4a8255879b4684d6a84668d}{R\+E\+P\+O\+R\+T\+ER}, 
+\\*
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4daa6f51cf00ba9bc370ee69e35b1fb2c8aa}{S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR}, 
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4daa487ebaaccf7772d5a8bfb16b2a4c8e3c}{T\+H\+E\+\_\+\+D\+O\+N\+A\+LD}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classActor_abe57954a691a017c6ee051d6d21baf13}{Actor} (const std\+::string \&\hyperlink{classActor_a400c24cfb4609e95e869bfe970f386c5}{name}, unsigned int \hyperlink{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}{id}, \hyperlink{classActor_a398752837eee9970ca00a3565e52c4da}{Actor\+Type} \hyperlink{classActor_a2be506fc6785b49d642a1b8f445c5c00}{type})
+\item 
+virtual \hyperlink{classActor_ad807fe8f85e72ab263a0c05e3231cb39}{$\sim$\+Actor} ()
+\item 
+std\+::string \hyperlink{classActor_a400c24cfb4609e95e869bfe970f386c5}{name} () const 
+\item 
+unsigned int \hyperlink{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}{id} () const 
+\item 
+\hyperlink{classActor_a398752837eee9970ca00a3565e52c4da}{Actor\+Type} \hyperlink{classActor_a2be506fc6785b49d642a1b8f445c5c00}{type} () const 
+\item 
+virtual std\+::string \hyperlink{classActor_a1595ffb3d753120a9e74eac0bd69adf1}{victory} (const \hyperlink{classActor}{Actor} \&other) const =0
+\item 
+virtual std\+::string \hyperlink{classActor_a0405c30d4ad11809647d2bf4e78026a7}{defeat} (const \hyperlink{classActor}{Actor} \&other) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract \hyperlink{classActor}{Actor} class 
+
+\subsection{Member Enumeration Documentation}
+\index{Actor@{Actor}!Actor\+Type@{Actor\+Type}}
+\index{Actor\+Type@{Actor\+Type}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{Actor\+Type}{ActorType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Actor\+::\+Actor\+Type}}\hypertarget{classActor_a398752837eee9970ca00a3565e52c4da}{}\label{classActor_a398752837eee9970ca00a3565e52c4da}
+enum Actor\+Type represents 6 types of actors \+: C\+E\+N\+T\+I\+P\+E\+DE, M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE, P\+O\+L\+I\+T\+I\+C\+I\+AN, R\+E\+P\+O\+R\+T\+ER, S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR, T\+H\+E\+\_\+\+D\+O\+N\+A\+LD \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+E\+N\+T\+I\+P\+E\+DE@{C\+E\+N\+T\+I\+P\+E\+DE}!Actor@{Actor}}\index{Actor@{Actor}!C\+E\+N\+T\+I\+P\+E\+DE@{C\+E\+N\+T\+I\+P\+E\+DE}}\item[{\em 
+C\+E\+N\+T\+I\+P\+E\+DE\hypertarget{classActor_a398752837eee9970ca00a3565e52c4daaca4c443e9d37143364c2760158033d08}{}\label{classActor_a398752837eee9970ca00a3565e52c4daaca4c443e9d37143364c2760158033d08}
+}]\index{M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE@{M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE}!Actor@{Actor}}\index{Actor@{Actor}!M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE@{M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE}}\item[{\em 
+M\+I\+S\+S\+\_\+\+U\+N\+I\+V\+E\+R\+SE\hypertarget{classActor_a398752837eee9970ca00a3565e52c4daacf7f8a23b2a3995ab6777cb142cec6dc}{}\label{classActor_a398752837eee9970ca00a3565e52c4daacf7f8a23b2a3995ab6777cb142cec6dc}
+}]\index{P\+O\+L\+I\+T\+I\+C\+I\+AN@{P\+O\+L\+I\+T\+I\+C\+I\+AN}!Actor@{Actor}}\index{Actor@{Actor}!P\+O\+L\+I\+T\+I\+C\+I\+AN@{P\+O\+L\+I\+T\+I\+C\+I\+AN}}\item[{\em 
+P\+O\+L\+I\+T\+I\+C\+I\+AN\hypertarget{classActor_a398752837eee9970ca00a3565e52c4daa7c3965a675a848e7e3d0c28a9218e20a}{}\label{classActor_a398752837eee9970ca00a3565e52c4daa7c3965a675a848e7e3d0c28a9218e20a}
+}]\index{R\+E\+P\+O\+R\+T\+ER@{R\+E\+P\+O\+R\+T\+ER}!Actor@{Actor}}\index{Actor@{Actor}!R\+E\+P\+O\+R\+T\+ER@{R\+E\+P\+O\+R\+T\+ER}}\item[{\em 
+R\+E\+P\+O\+R\+T\+ER\hypertarget{classActor_a398752837eee9970ca00a3565e52c4daa2911d77bb4a8255879b4684d6a84668d}{}\label{classActor_a398752837eee9970ca00a3565e52c4daa2911d77bb4a8255879b4684d6a84668d}
+}]\index{S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR@{S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR}!Actor@{Actor}}\index{Actor@{Actor}!S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR@{S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR}}\item[{\em 
+S\+O\+C\+I\+A\+L\+\_\+\+J\+U\+S\+T\+I\+C\+E\+\_\+\+W\+A\+R\+R\+I\+OR\hypertarget{classActor_a398752837eee9970ca00a3565e52c4daa6f51cf00ba9bc370ee69e35b1fb2c8aa}{}\label{classActor_a398752837eee9970ca00a3565e52c4daa6f51cf00ba9bc370ee69e35b1fb2c8aa}
+}]\index{T\+H\+E\+\_\+\+D\+O\+N\+A\+LD@{T\+H\+E\+\_\+\+D\+O\+N\+A\+LD}!Actor@{Actor}}\index{Actor@{Actor}!T\+H\+E\+\_\+\+D\+O\+N\+A\+LD@{T\+H\+E\+\_\+\+D\+O\+N\+A\+LD}}\item[{\em 
+T\+H\+E\+\_\+\+D\+O\+N\+A\+LD\hypertarget{classActor_a398752837eee9970ca00a3565e52c4daa487ebaaccf7772d5a8bfb16b2a4c8e3c}{}\label{classActor_a398752837eee9970ca00a3565e52c4daa487ebaaccf7772d5a8bfb16b2a4c8e3c}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Actor@{Actor}!Actor@{Actor}}
+\index{Actor@{Actor}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{Actor(const std\+::string \&name, unsigned int id, Actor\+Type type)}{Actor(const std::string &name, unsigned int id, ActorType type)}}]{\setlength{\rightskip}{0pt plus 5cm}Actor\+::\+Actor (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{unsigned int}]{id, }
+\item[{{\bf Actor\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classActor_abe57954a691a017c6ee051d6d21baf13}{}\label{classActor_abe57954a691a017c6ee051d6d21baf13}
+Creating new actor
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the actor \\
+\hline
+{\em id} & unqiue id of the actor \\
+\hline
+{\em type} & type of the actor \\
+\hline
+\end{DoxyParams}
+\index{Actor@{Actor}!````~Actor@{$\sim$\+Actor}}
+\index{````~Actor@{$\sim$\+Actor}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{$\sim$\+Actor()}{~Actor()}}]{\setlength{\rightskip}{0pt plus 5cm}Actor\+::$\sim$\+Actor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classActor_ad807fe8f85e72ab263a0c05e3231cb39}{}\label{classActor_ad807fe8f85e72ab263a0c05e3231cb39}
+Destructor for actor 
+
+\subsection{Member Function Documentation}
+\index{Actor@{Actor}!defeat@{defeat}}
+\index{defeat@{defeat}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{defeat(const Actor \&other) const =0}{defeat(const Actor &other) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string Actor\+::defeat (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classActor_a0405c30d4ad11809647d2bf4e78026a7}{}\label{classActor_a0405c30d4ad11809647d2bf4e78026a7}
+
+
+Implemented in \hyperlink{classSJW_a04d480d0bedb684591a1a14d41b93257}{S\+JW}, \hyperlink{classMissUniverse_af8842e3ec345796fcdadca07a79442b0}{Miss\+Universe}, \hyperlink{classReporter_a6147cf4ee48d5c81e72538d39c79d228}{Reporter}, \hyperlink{classTheDonald_ac6920f6026c3b0d91afbce90f6f07fad}{The\+Donald}, \hyperlink{classPolitician_a0734a1c1deed35b36b02f83b2c9ee46c}{Politician}, and \hyperlink{classCentipede_ae7cf6ce3b3b3ce66fe82986fd31d7be0}{Centipede}.
+
+\index{Actor@{Actor}!id@{id}}
+\index{id@{id}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{id() const }{id() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Actor\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}{}\label{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}
+get the id of the actor
+
+\begin{DoxyReturn}{Returns}
+id of actor 
+\end{DoxyReturn}
+\index{Actor@{Actor}!name@{name}}
+\index{name@{name}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{name() const }{name() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Actor\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classActor_a400c24cfb4609e95e869bfe970f386c5}{}\label{classActor_a400c24cfb4609e95e869bfe970f386c5}
+get the name of the actor
+
+\begin{DoxyReturn}{Returns}
+actor\textquotesingle{}s name 
+\end{DoxyReturn}
+\index{Actor@{Actor}!type@{type}}
+\index{type@{type}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{type() const }{type() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actor\+::\+Actor\+Type} Actor\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classActor_a2be506fc6785b49d642a1b8f445c5c00}{}\label{classActor_a2be506fc6785b49d642a1b8f445c5c00}
+get the type of actor
+
+\begin{DoxyReturn}{Returns}
+actor type 
+\end{DoxyReturn}
+\index{Actor@{Actor}!victory@{victory}}
+\index{victory@{victory}!Actor@{Actor}}
+\subsubsection[{\texorpdfstring{victory(const Actor \&other) const =0}{victory(const Actor &other) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string Actor\+::victory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classActor_a1595ffb3d753120a9e74eac0bd69adf1}{}\label{classActor_a1595ffb3d753120a9e74eac0bd69adf1}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classSJW_af9bffa85da9c04559f38210f11a80c1d}{S\+JW}, \hyperlink{classMissUniverse_aac659076d954d5342ba494a993eab2fd}{Miss\+Universe}, \hyperlink{classReporter_ac0c496d5f8f3f56c71d2afe6ab53490e}{Reporter}, \hyperlink{classTheDonald_abee1d5bb4910c657ffd41fc745298cdc}{The\+Donald}, \hyperlink{classPolitician_a7428489cb0380195cc5d74faeece6355}{Politician}, and \hyperlink{classCentipede_a1b995576767d3eff9bfcac599ec35ddf}{Centipede}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{actor_8h}{actor.\+h}\item 
+src/\hyperlink{actor_8cpp}{actor.\+cpp}\end{DoxyCompactItemize}

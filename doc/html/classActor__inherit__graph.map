@@ -1,0 +1,9 @@
+<map id="Actor" name="Actor">
+<area shape="rect" id="node2" href="$classCentipede.html" title="{Centipede\n|+ NAME\l|+ Centipede()\l+ ~Centipede()\l+ victory()\l+ defeat()\l}" alt="" coords="5,248,115,369"/>
+<area shape="rect" id="node3" href="$classHero.html" title="{Hero\n|+ CHANCE_TO_BEAT_CENTIPEDE\l+ CHANCE_TO_BEAT_POLITICIAN\l+ CHANCE_TO_BEAT_MISS\l_UNIVERSE\l+ CHANCE_TO_BEAT_THE\l_DONALD\l|+ Hero()\l+ ~Hero()\l+ defend()\l}" alt="" coords="139,219,383,399"/>
+<area shape="rect" id="node6" href="$classMissUniverse.html" title="{MissUniverse\n|+ NAME\l|+ MissUniverse()\l+ ~MissUniverse()\l+ victory()\l+ defeat()\l}" alt="" coords="408,248,539,369"/>
+<area shape="rect" id="node7" href="$classPolitician.html" title="{Politician\n|+ NAME\l|+ Politician()\l+ ~Politician()\l+ victory()\l+ defeat()\l}" alt="" coords="563,248,666,369"/>
+<area shape="rect" id="node8" href="$classTheDonald.html" title="{TheDonald\n|+ NAME\l|+ TheDonald()\l+ ~TheDonald()\l+ victory()\l+ defeat()\l}" alt="" coords="690,248,803,369"/>
+<area shape="rect" id="node4" href="$classReporter.html" title="{Reporter\n|+ NAME\l|+ Reporter()\l+ ~Reporter()\l+ victory()\l+ defeat()\l}" alt="" coords="154,447,254,568"/>
+<area shape="rect" id="node5" href="$classSJW.html" title="{SJW\n|+ NAME\l|+ SJW()\l+ ~SJW()\l+ victory()\l+ defeat()\l}" alt="" coords="278,447,359,568"/>
+</map>

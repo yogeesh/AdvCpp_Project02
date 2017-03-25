@@ -1,0 +1,121 @@
+\hypertarget{classSJW}{}\section{S\+JW Class Reference}
+\label{classSJW}\index{S\+JW@{S\+JW}}
+
+
+{\ttfamily \#include $<$sjw.\+h$>$}
+
+
+
+Inheritance diagram for S\+JW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classSJW__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+JW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classSJW__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSJW_aee0f414b8da298a625c303173cd9bfe2}{S\+JW} (unsigned int \hyperlink{classActor_a084438abd4bcb9d5e17b8ad75b0f5984}{id})
+\item 
+\hyperlink{classSJW_a28fa43a9925b7308b3f06b004510abeb}{$\sim$\+S\+JW} ()
+\item 
+virtual std\+::string \hyperlink{classSJW_af9bffa85da9c04559f38210f11a80c1d}{victory} (const \hyperlink{classActor}{Actor} \&other) const 
+\item 
+virtual std\+::string \hyperlink{classSJW_a04d480d0bedb684591a1a14d41b93257}{defeat} (const \hyperlink{classActor}{Actor} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{classSJW_a38d0a4a884536b96c3c9e7b5c32bf0fb}{N\+A\+ME} = \char`\"{}S\+JW\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+All \hyperlink{classSJW}{S\+JW}\textquotesingle{}s are basically \hyperlink{classHero}{Hero}\textquotesingle{}s 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+JW@{S\+JW}!S\+JW@{S\+JW}}
+\index{S\+JW@{S\+JW}!S\+JW@{S\+JW}}
+\subsubsection[{\texorpdfstring{S\+J\+W(unsigned int id)}{SJW(unsigned int id)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+J\+W\+::\+S\+JW (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classSJW_aee0f414b8da298a625c303173cd9bfe2}{}\label{classSJW_aee0f414b8da298a625c303173cd9bfe2}
+create new \hyperlink{classSJW}{S\+JW} \hyperlink{classHero}{Hero} 
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: \hyperlink{classSJW}{S\+JW} id \\
+\hline
+\end{DoxyParams}
+\index{S\+JW@{S\+JW}!````~S\+JW@{$\sim$\+S\+JW}}
+\index{````~S\+JW@{$\sim$\+S\+JW}!S\+JW@{S\+JW}}
+\subsubsection[{\texorpdfstring{$\sim$\+S\+J\+W()}{~SJW()}}]{\setlength{\rightskip}{0pt plus 5cm}S\+J\+W\+::$\sim$\+S\+JW (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSJW_a28fa43a9925b7308b3f06b004510abeb}{}\label{classSJW_a28fa43a9925b7308b3f06b004510abeb}
+Destructor for \hyperlink{classSJW}{S\+JW} 
+
+\subsection{Member Function Documentation}
+\index{S\+JW@{S\+JW}!defeat@{defeat}}
+\index{defeat@{defeat}!S\+JW@{S\+JW}}
+\subsubsection[{\texorpdfstring{defeat(const Actor \&other) const }{defeat(const Actor &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string S\+J\+W\+::defeat (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSJW_a04d480d0bedb684591a1a14d41b93257}{}\label{classSJW_a04d480d0bedb684591a1a14d41b93257}
+message for \hyperlink{classSJW}{S\+JW} hero defeat over other actor 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: opponent actor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: message for defeat 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classActor_a0405c30d4ad11809647d2bf4e78026a7}{Actor}.
+
+\index{S\+JW@{S\+JW}!victory@{victory}}
+\index{victory@{victory}!S\+JW@{S\+JW}}
+\subsubsection[{\texorpdfstring{victory(const Actor \&other) const }{victory(const Actor &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string S\+J\+W\+::victory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Actor} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSJW_af9bffa85da9c04559f38210f11a80c1d}{}\label{classSJW_af9bffa85da9c04559f38210f11a80c1d}
+message for \hyperlink{classSJW}{S\+JW} hero victory over other actor 
+\begin{DoxyParams}{Parameters}
+{\em other} & \+: opponent actor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: message for victory 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classActor_a1595ffb3d753120a9e74eac0bd69adf1}{Actor}.
+
+
+
+\subsection{Member Data Documentation}
+\index{S\+JW@{S\+JW}!N\+A\+ME@{N\+A\+ME}}
+\index{N\+A\+ME@{N\+A\+ME}!S\+JW@{S\+JW}}
+\subsubsection[{\texorpdfstring{N\+A\+ME}{NAME}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string S\+J\+W\+::\+N\+A\+ME = \char`\"{}S\+JW\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSJW_a38d0a4a884536b96c3c9e7b5c32bf0fb}{}\label{classSJW_a38d0a4a884536b96c3c9e7b5c32bf0fb}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sjw_8h}{sjw.\+h}\item 
+src/\hyperlink{sjw_8cpp}{sjw.\+cpp}\end{DoxyCompactItemize}

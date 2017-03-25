@@ -1,0 +1,81 @@
+\hypertarget{classRNG}{}\section{R\+NG Class Reference}
+\label{classRNG}\index{R\+NG@{R\+NG}}
+
+
+{\ttfamily \#include $<$rng.\+h$>$}
+
+
+
+Collaboration diagram for R\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classRNG__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classRNG_ab860f171afa8f937eccba29a8575f55a}{seed\+\_\+rand} (int seed)
+\item 
+static bool \hyperlink{classRNG_ad3340707ef6f70eeb2923572c2839b02}{roll\+\_\+dice} (const std\+::string \&a, const std\+::string \&b, int winning\+\_\+chances)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pseudo random number generator that uses a simple linear congruential generator\+:
+
+\href{https://rosettacode.org/wiki/Linear_congruential_generator}{\tt https\+://rosettacode.\+org/wiki/\+Linear\+\_\+congruential\+\_\+generator}
+
+\begin{DoxyAuthor}{Author}
+Sean Strout @ R\+IT CS 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\index{R\+NG@{R\+NG}!roll\+\_\+dice@{roll\+\_\+dice}}
+\index{roll\+\_\+dice@{roll\+\_\+dice}!R\+NG@{R\+NG}}
+\subsubsection[{\texorpdfstring{roll\+\_\+dice(const std\+::string \&a, const std\+::string \&b, int winning\+\_\+chances)}{roll_dice(const std::string &a, const std::string &b, int winning_chances)}}]{\setlength{\rightskip}{0pt plus 5cm}bool R\+N\+G\+::roll\+\_\+dice (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a, }
+\item[{const std\+::string \&}]{b, }
+\item[{int}]{winning\+\_\+chances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classRNG_ad3340707ef6f70eeb2923572c2839b02}{}\label{classRNG_ad3340707ef6f70eeb2923572c2839b02}
+a rolls the dice against b, with a\textquotesingle{}s chance to defeat b as 0..winning\+\_\+chances-\/1. It prints out the message where \{result\} is between 0..99 inclusively.
+
+\{a\} rolls a \{result\} against \{b\}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the dice roller \\
+\hline
+{\em b} & who the dice roller is rolling against \\
+\hline
+{\em winning\+\_\+chances} & a value between 0 and 100, inclusively, as a\textquotesingle{}s chance to beat b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether a beat b or not 
+\end{DoxyReturn}
+\index{R\+NG@{R\+NG}!seed\+\_\+rand@{seed\+\_\+rand}}
+\index{seed\+\_\+rand@{seed\+\_\+rand}!R\+NG@{R\+NG}}
+\subsubsection[{\texorpdfstring{seed\+\_\+rand(int seed)}{seed_rand(int seed)}}]{\setlength{\rightskip}{0pt plus 5cm}void R\+N\+G\+::seed\+\_\+rand (
+\begin{DoxyParamCaption}
+\item[{int}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classRNG_ab860f171afa8f937eccba29a8575f55a}{}\label{classRNG_ab860f171afa8f937eccba29a8575f55a}
+Seed the random number generator so roll\+\_\+dice has predictable output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & seed value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{rng_8h}{rng.\+h}\item 
+src/\hyperlink{rng_8cpp}{rng.\+cpp}\end{DoxyCompactItemize}
