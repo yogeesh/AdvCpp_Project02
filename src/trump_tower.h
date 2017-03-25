@@ -41,15 +41,21 @@ private:
     unsigned long politiciansId_;
     unsigned long missUniverseId_;
 
-    std::deque<SJW*> sjw_;
-    std::stack<Reporter*> reporter_;
-    std::set<Actor*> wahmbulance_;
-    std::set<Actor*> choppa_;
+    class WahmbulanceCmp{
+    public:
+        bool operator()(Actor* one, Actor* two);
+    };
+
+    std::deque<Actor*> sjw_;
+    std::stack<Actor*> reporter_;
+    std::set<Actor*, WahmbulanceCmp> wahmbulance_;
+    std::queue<Actor*> choppa_;
     Floor<Actor*>* enemy_;
 
     void buildTrumpTower_();
-    void printStatistics_() const;
+    void printStatistics_();
 
 };
+
 
 #endif //PROJECT1_TRUMP_TOWER_H

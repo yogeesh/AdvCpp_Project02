@@ -8,9 +8,9 @@ SJW::SJW(unsigned int id):
 SJW::~SJW() {}
 
 std::string SJW::defeat(const Actor &other) const {
-    return NAME + " deletes all social media accounts after being humiliated by " + other.name();
+    return  name() + " deletes all social media accounts after being humiliated by " + other.name();
 }
 
 std::string SJW::victory(const Actor &other) const {
-    return NAME + " rips " + other.name() +" a new one on social media";
+    return name() + " rips " + other.name() +" a new one on social media";
 }

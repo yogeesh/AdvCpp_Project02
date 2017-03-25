@@ -31,31 +31,6 @@ TrumpTower::~TrumpTower() {
 
 }
 
-void TrumpTower::printStatistics_() const{
-    std::cout << std::to_string(choppa_.size()) << " reporter/s made it to da choppa:" << std::endl;
-    for(std::set<Actor*>::iterator iter=choppa_.begin(); iter != choppa_.end(); iter++)
-        std::cout << "\t" + (*iter)->name() << std::endl;
-
-    std::cout << std::to_string(wahmbulance_.size()) << " actor/s are healing up in the wahmbulance:" << std::endl;
-    for(std::set<Actor*>::iterator iter=wahmbulance_.begin(); iter != wahmbulance_.end(); iter++)
-        std::cout << "\t" + (*iter)->name() << std::endl;
-
-    std::cout << std::to_string(enemy_->size(Direction::EAST))
-                                                     << " enemy/s remain in the east hallway:" << std::endl;
-    while( enemy_->size(Direction::EAST) != 0){
-        std::cout << "\t" + enemy_->front(Direction::EAST)->name() << std::endl;
-        enemy_->remove(Direction::EAST);
-    }
-
-    std::cout << std::to_string(enemy_->size(Direction::WEST))
-              << " enemy/s remain in the east hallway:" << std::endl;
-    while( enemy_->size(Direction::WEST) != 0){
-        std::cout << "\t" + enemy_->front(Direction::WEST)->name() << std::endl;
-        enemy_->remove(Direction::WEST);
-    }
-
-}
-
 void TrumpTower::buildTrumpTower_() {
 
     // Build SJW's
@@ -85,7 +60,7 @@ void TrumpTower::buildTrumpTower_() {
     }
 
     for (unsigned int i = 0; i < numMissUniverses_; i++) {
-        if (politiciansId_ % 2 == 0)
+        if (missUniverseId_ % 2 == 0)
             enemy_->insert(new MissUniverse(missUniverseId_++), Direction::EAST);
         else
             enemy_->insert(new MissUniverse(missUniverseId_++), Direction::WEST);
@@ -93,7 +68,7 @@ void TrumpTower::buildTrumpTower_() {
     std::cout << "Initialized enemies on floor " + std::to_string(enemy_->number())
                  + " with " + std::to_string(enemy_->size(Direction::EAST))
                  + " enemies in the east hall and "
-                 + std::to_string(enemy_->size(Direction::EAST))
+                 + std::to_string(enemy_->size(Direction::WEST))
                  + " enemies in west hall" << std::endl;
 }
 
@@ -108,45 +83,106 @@ void TrumpTower::action() {
     std::map<Direction, std::string> direction = {{Direction::EAST, "east"},
                                                   {Direction::WEST, "west"}};
 
-    curSJW = sjw_.front();
-    curReporter = reporter_.top();
+    while((reporter_.size() != 0) && (sjw_.size() != 0)) {
+        curSJW = sjw_.front();
+        curReporter = reporter_.top();
 
-    std::cout << curSJW->name() + " rescues " + curReporter->name() + " from basement" << std::endl;
+        std::cout << curSJW->name() + " rescues " + curReporter->name() + " from basement" << std::endl;
 
-    if( curSJW->id() % 2 == 0 )
-        curDir = Direction::EAST;
-    else
-        curDir = Direction::WEST;
+        if (curSJW->id() % 2 == 0)
+            curDir = Direction::EAST;
+        else
+            curDir = Direction::WEST;
 
-    if( enemy_->size(curDir) > 0 )
-        curEnemy = enemy_->front(curDir);
-    else
-        std::cout << "No enemies are left in the " + direction[curDir] + " hallway" << std::endl;
-
-    if( (enemy_->size(curDir) == 0) || (((Hero*)curSJW)->defend(*curEnemy)) ) {
-        if(enemy_->size(curDir) > 0){
-            std::cout << ((Hero*)curSJW)->victory(*curEnemy) << std::endl;
-            wahmbulance_.insert(curEnemy);
-            enemy_->remove(curDir);
-        }
-
-        std::cout << curReporter->name() + " encounters " + donald->name() + " on the roof!" << std::endl;
-        if( ((Hero*)curReporter)->defend(*donald)) {
-            std::cout << curReporter->victory(*donald) << std::endl;
-            choppa_.insert(curReporter);
-            std::cout << curReporter->name() + " gets to da choppa!" << std::endl;
+        if (enemy_->size(curDir) > 0) {
+            curEnemy = enemy_->front(curDir);
+            std::cout << curSJW->name() + " encounters " + curEnemy->name()
+                         + " on the "+ std::to_string(enemy_->number())+" floor!" << std::endl;
         }
         else
+            std::cout << "No enemies are left in the " + direction[curDir] + " hallway" << std::endl;
+
+        if ((enemy_->size(curDir) == 0) || (((Hero *) curSJW)->defend(*curEnemy))) {
+            if (enemy_->size(curDir) > 0) {
+                std::cout << curSJW->victory(*curEnemy) << std::endl;
+                std::cout << curEnemy->defeat(*curSJW) << std::endl;
+                wahmbulance_.insert(curEnemy);
+                enemy_->remove(curDir);
+                sjw_.pop_front();
+                sjw_.push_back(curSJW);
+            }
+
+            std::cout << curReporter->name() + " encounters " + donald->name() + " on the roof!" << std::endl;
+            if (((Hero *) curReporter)->defend(*donald)) {
+                std::cout << curReporter->victory(*donald) << std::endl;
+                std::cout << donald->defeat(*curReporter) << std::endl;
+                choppa_.push(curReporter);
+                reporter_.pop();
+                donald->defeat(*curReporter);
+                std::cout << curReporter->name() + " gets to da choppa!" << std::endl;
+            } else {
+                std::cout << donald->victory(*curReporter) << std::endl;
+                std::cout << curReporter->defeat(*donald) << std::endl;
+                wahmbulance_.insert(curReporter);
+                // wahmbulance_.insert(curSJW);
+                reporter_.pop();
+            }
+        } else {
+            std::cout << curEnemy->victory(*curSJW) <<std::endl;
+            std::cout << curSJW->defeat(*curEnemy) <<std::endl;
+            enemy_->remove(curDir);
+            enemy_->insert(curEnemy, curDir);
+            wahmbulance_.insert(curSJW);
             wahmbulance_.insert(curReporter);
+            sjw_.pop_front();
+            reporter_.pop();
+        }
     }
-    else{
-        curEnemy->victory(*curSJW);
-        wahmbulance_.insert(curSJW);
-        wahmbulance_.insert(curReporter);
-        sjw_.pop_front();
+    printStatistics_();
+
+}
+
+void TrumpTower::printStatistics_(){
+    std::cout << std::to_string(choppa_.size()) << " reporter/s made it to da choppa:" << std::endl;
+    while( choppa_.size() != 0) {
+        std::cout << "\t" + choppa_.front()->name() << std::endl;
+        choppa_.pop();
+    }
+
+    std::cout << std::to_string(wahmbulance_.size()) << " actor/s are healing up in the wahmbulance:" << std::endl;
+    for(std::set<Actor*>::iterator iter=wahmbulance_.begin(); iter != wahmbulance_.end(); iter++)
+        std::cout << "\t" + (*iter)->name() << std::endl;
+
+    std::cout << std::to_string(enemy_->size(Direction::EAST))
+              << " enemy/s remain in the east hallway:" << std::endl;
+    while( enemy_->size(Direction::EAST) != 0){
+        std::cout << "\t" + enemy_->front(Direction::EAST)->name() << std::endl;
+        enemy_->remove(Direction::EAST);
+    }
+
+    std::cout << std::to_string(enemy_->size(Direction::WEST))
+              << " enemy/s remain in the west hallway:" << std::endl;
+    while( enemy_->size(Direction::WEST) != 0){
+        std::cout << "\t" + enemy_->front(Direction::WEST)->name() << std::endl;
+        enemy_->remove(Direction::WEST);
+    }
+
+    std::cout << std::to_string(reporter_.size()) + " reporter/s are left in the basement:" << std::endl;
+    while( reporter_.size() != 0 ){
+        std::cout << "\t" + reporter_.top()->name() << std::endl;
         reporter_.pop();
     }
 
-    printStatistics_();
+    std::cout << std::to_string(sjw_.size()) + " SJW/s are chilling in their safe space:" << std::endl;
+    while( sjw_.size() != 0){
+        std::cout << "\t" + sjw_.front()->name() << std::endl;
+        sjw_.pop_front();
+    }
+}
 
+
+bool TrumpTower::WahmbulanceCmp::operator()(Actor* one, Actor* two){
+    if(one->name() < two->name())
+        return true;
+    return false;
 }

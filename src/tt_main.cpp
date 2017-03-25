@@ -4,5 +4,5 @@
 
 int main (int argc, char *argv[]){
 
-TrumpTower(1, 1, 0, 0, 0);
+TrumpTower(10100, 20000, 3000, 3000, 3000);
 }

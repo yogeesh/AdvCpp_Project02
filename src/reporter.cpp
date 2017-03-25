@@ -8,10 +8,10 @@ Reporter::Reporter(unsigned int id):
 Reporter::~Reporter() {}
 
 std::string Reporter::defeat(const Actor &other) const {
-    return NAME + "headline story is outed by " + other.name() + " as being fake news";
+    return name() + "'s headline story is outed by " + other.name() + " as being fake news";
 }
 
 
 std::string Reporter::victory(const Actor &other) const {
-    return NAME + " successfully uploads headline story about " + other.name() + "'s infidelity";
+    return name() + " successfully uploads headline story about " + other.name() + "'s infidelity";
 }
