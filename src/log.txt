@@ -1,3 +1,69 @@
+commit bafb91f6f82a1ab62ce7e6682f398d144f6de87c
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 25 19:40:23 2017 -0400
+
+    fix 1 small issue
+
+commit d9b4a5c233b1f3616b6206eefe7255be73da5203
+Author: Yogeesh  Seralathan <ys4815@cs.rit.edu>
+Date:   Sat Mar 25 19:05:42 2017 -0400
+
+    doc generated
+
+commit 6fbfeb93ce084c1d2677e5b708c07dfaacd5e602
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 25 18:59:32 2017 -0400
+
+    doc initiate
+
+commit cdf280efa7ae9129b8d4b18cbd732a88fca7350a
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 25 18:09:07 2017 -0400
+
+    removing clion wanted heavy files
+
+commit 47e5223d9727a4972ada41fc2a670d9fd845043e
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 25 17:59:56 2017 -0400
+
+    all test case passed
+
+commit 1d4f775f3b8f3a9883a5b5f7f296d35a8330b977
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 25 12:59:21 2017 -0400
+
+    Trump action done, not final
+
+commit 6a8bc83ffc4c2d0d113132e65cd73c3659f3aa16
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Mon Mar 20 03:30:39 2017 -0400
+
+    base trump tower built
+
+commit bff5c9c48e58ff18f5e5e2258c213bc291493cfa
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sun Mar 19 11:07:32 2017 -0400
+
+    All actors and hero implemented
+
+commit 1afd0f550eec180df3bde4a90f3785f7832e5adf
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 18 12:28:38 2017 -0400
+
+    actor done
+
+commit 01ec2cbac8ce2458e4a23d77ba10bce3ea36130c
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Sat Mar 18 01:30:08 2017 -0400
+
+    trump header and base struct
+
+commit 2eba35356697928f535a323f2a0692d37e2d6e55
+Author: yogeesh <yogeesh93@gmail.com>
+Date:   Fri Mar 10 16:20:42 2017 -0500
+
+    header.mak file added
+
 commit b927411a49611efa7be56566dfcf8370d925cf5e
 Author: yogeesh <yogeesh93@gmail.com>
 Date:   Tue Mar 7 17:14:39 2017 -0500
