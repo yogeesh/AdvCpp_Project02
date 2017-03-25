@@ -99,9 +99,11 @@ void TrumpTower::action() {
             std::cout << curSJW->name() + " encounters " + curEnemy->name()
                          + " on the "+ std::to_string(enemy_->number())+" floor!" << std::endl;
         }
-        else
+        else {
             std::cout << "No enemies are left in the " + direction[curDir] + " hallway" << std::endl;
-
+            sjw_.pop_front();
+            sjw_.push_back(curSJW);
+        }
         if ((enemy_->size(curDir) == 0) || (((Hero *) curSJW)->defend(*curEnemy))) {
             if (enemy_->size(curDir) > 0) {
                 std::cout << curSJW->victory(*curEnemy) << std::endl;
@@ -182,7 +184,7 @@ void TrumpTower::printStatistics_(){
 
 
 bool TrumpTower::WahmbulanceCmp::operator()(Actor* one, Actor* two){
-    if(one->name() < two->name())
+    if((one->name() < two->name()))
         return true;
     return false;
 }
