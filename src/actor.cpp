@@ -6,6 +6,8 @@ Actor::Actor(const std::string &name, unsigned int id, ActorType type):
             id_(id),
             type_(type){}
 
+Actor::~Actor(){}
+
 std::string Actor::name() const{
     return name_;
 }

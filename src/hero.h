@@ -8,6 +8,8 @@ class Hero : public Actor{
 public:
     Hero(const std::string &name, unsigned int id, Actor::ActorType type);
 
+    ~Hero();
+
     bool defend(const Actor &other) const;
 
     static const int CHANCE_TO_BEAT_CENTIPEDE;
@@ -20,6 +22,7 @@ public:
 
 
 private:
+
 };
 
 #endif //PROJECT1_HERO_H

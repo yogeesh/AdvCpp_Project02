@@ -63,3 +63,4 @@ unsigned int Floor<T>::number() const{
 
 template class Floor<int>;
 template class Floor<std::string>;
+template class Floor<Actor*>;

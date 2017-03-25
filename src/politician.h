@@ -9,11 +9,13 @@ public:
 
     Politician(unsigned int id);
 
+    ~Politician();
+
     virtual std::string victory(const Actor &other) const;
 
     virtual std::string defeat(const Actor &other) const;
 
-    static const std::string NAME = "Politician";
+    static const std::string NAME;
 
 private:
     unsigned int id_;

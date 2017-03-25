@@ -8,6 +8,8 @@ class Reporter : public Hero{
 public:
     Reporter(unsigned int id);
 
+    ~Reporter();
+
     virtual std::string victory(const Actor &other) const;
 
     virtual std::string defeat(const Actor &other) const;

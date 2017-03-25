@@ -5,6 +5,8 @@ const std::string Centipede::NAME = "Centipede";
 Centipede::Centipede(unsigned int id):
         Actor(NAME, id, Actor::ActorType::MISS_UNIVERSE){};
 
+Centipede::~Centipede(){}
+
 std::string Centipede::defeat(const Actor &other) const {
     return NAME + " gets called out by " + other.name() + " for vote manipulation and has their reddit account suspended";
 }

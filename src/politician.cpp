@@ -3,6 +3,8 @@
 Politician::Politician(unsigned int id):
             Actor(NAME, id, Actor::POLITICIAN){}
 
+Politician::~Politician(){}
+
 std::string Politician::victory(const Actor &other) const{
     return NAME + " buries the truth and successfully silences " + other.name();
 }

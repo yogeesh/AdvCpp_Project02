@@ -3,7 +3,9 @@
 const std::string Reporter::NAME = "Reporter";
 
 Reporter::Reporter(unsigned int id):
-        Hero(NAME, id, Actor::ActorType::REPORTER){}
+        Hero(NAME + "#" + std::to_string(id), id, Actor::ActorType::REPORTER){}
+
+Reporter::~Reporter() {}
 
 std::string Reporter::defeat(const Actor &other) const {
     return NAME + "headline story is outed by " + other.name() + " as being fake news";

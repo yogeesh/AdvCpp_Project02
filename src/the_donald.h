@@ -8,6 +8,8 @@ class TheDonald : public Actor{
 public:
     TheDonald(unsigned int id);
 
+    ~TheDonald();
+
     virtual std::string victory(const Actor &other) const;
 
     virtual std::string defeat(const Actor &other) const;

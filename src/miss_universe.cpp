@@ -1,7 +1,9 @@
 #include "miss_universe.h"
 
 MissUniverse::MissUniverse(unsigned int id):
-        Actor(NAME, id, Actor::ActorType::MISS_UNIVERSE){};
+        Actor(NAME, id, Actor::ActorType::MISS_UNIVERSE){}
+
+MissUniverse::~MissUniverse(){}
 
 std::string MissUniverse::defeat(const Actor &other) const {
     return NAME + "'s mascara begins to run as she bawls in defeat to " + other.name();

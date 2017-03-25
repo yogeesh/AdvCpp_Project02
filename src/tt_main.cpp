@@ -3,6 +3,6 @@
 #include "trump_tower.h"
 
 int main (int argc, char *argv[]){
-    TrumpTower()
 
+TrumpTower(1, 1, 0, 0, 0);
 }

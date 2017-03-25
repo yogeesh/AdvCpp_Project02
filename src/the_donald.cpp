@@ -5,6 +5,8 @@ const std::string TheDonald::NAME = "The Donald";
 TheDonald::TheDonald(unsigned int id = 1):
         Actor(NAME, id, Actor::ActorType::THE_DONALD){}
 
+TheDonald::~TheDonald() {}
+
 std::string TheDonald::victory(const Actor &other) const{
     return NAME + " makes America great again and fires " + other.name();
 }

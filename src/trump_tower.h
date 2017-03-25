@@ -43,11 +43,12 @@ private:
 
     std::deque<SJW*> sjw_;
     std::stack<Reporter*> reporter_;
-    std::set wahmbulance_;
-    std::set choppa_;
-    Floor<Actor*> enemy_;
+    std::set<Actor*> wahmbulance_;
+    std::set<Actor*> choppa_;
+    Floor<Actor*>* enemy_;
 
     void buildTrumpTower_();
+    void printStatistics_() const;
 
 };
 

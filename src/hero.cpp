@@ -3,18 +3,29 @@
 #include <iostream>
 
 Hero::Hero(const std::string &name, unsigned int id, Actor::ActorType type):
-        Actor(name, id, type){}
+        Actor(name, id, type) {}
+
+Hero::~Hero(){}
 
 bool Hero::defend(const Actor &other) const {
-    if( other )
-    RNG::roll_dice(name(), other.name(), )
+    int chanceToBeat;
+    if(type() == Actor::THE_DONALD)
+        chanceToBeat = CHANCE_TO_BEAT_THE_DONALD;
+    else if(type() == Actor::POLITICIAN)
+        chanceToBeat = CHANCE_TO_BEAT_POLITICIAN;
+    else if(type() == Actor::MISS_UNIVERSE)
+        chanceToBeat = CHANCE_TO_BEAT_MISS_UNIVERSE;
+    else
+        chanceToBeat = CHANCE_TO_BEAT_CENTIPEDE;
+
+    return RNG::roll_dice(name(), other.name(), chanceToBeat);
 }
 
-static const int Hero::CHANCE_TO_BEAT_CENTIPEDE = 90;
+const int Hero::CHANCE_TO_BEAT_CENTIPEDE = 90;
 
-static const int Hero::CHANCE_TO_BEAT_POLITICIAN = 70;
+const int Hero::CHANCE_TO_BEAT_POLITICIAN = 70;
 
-static const int Hero::CHANCE_TO_BEAT_MISS_UNIVERSE = 80;
+const int Hero::CHANCE_TO_BEAT_MISS_UNIVERSE = 80;
 
-static const int Hero::CHANCE_TO_BEAT_THE_DONALD = 25;
+const int Hero::CHANCE_TO_BEAT_THE_DONALD = 25;
 
