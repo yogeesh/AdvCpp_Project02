@@ -3,6 +3,5 @@
 #include "trump_tower.h"
 
 int main (int argc, char *argv[]){
-
-TrumpTower(10100, 20000, 3000, 3000, 3000);
+TrumpTower(std::stoi(argv[1]), std::stoi(argv[2]), std::stoi(argv[3]), std::stoi(argv[4]), std::stoi(argv[5]));
 }
