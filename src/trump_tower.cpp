@@ -28,7 +28,10 @@ TrumpTower::TrumpTower(unsigned long numSJWs, unsigned long numReporters,
 }
 
 TrumpTower::~TrumpTower() {
-
+    while( sjw_.size() != 0){
+        delete sjw_.front();
+        sjw_.pop_front();
+    }
 }
 
 void TrumpTower::buildTrumpTower_() {
