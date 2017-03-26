@@ -32,6 +32,28 @@ TrumpTower::~TrumpTower() {
         delete sjw_.front();
         sjw_.pop_front();
     }
+    // delete [] sjw_;
+
+    while(reporter_.size() != 0){
+        delete reporter_.top();
+        reporter_.pop();
+    }
+    // delete [] reporter_;
+
+    for(std::set<Actor*, WahmbulanceCmp>::iterator iter=wahmbulance_.begin();
+            iter!=wahmbulance_.end(); iter++){
+        delete *iter;
+        wahmbulance_.erase(iter);
+    }
+    // delete [] wahmbulance_;
+
+    while(choppa_.size() != 0){
+        delete choppa_.front();
+        choppa_.pop();
+    }
+    // delete [] choppa_;
+
+
 }
 
 void TrumpTower::buildTrumpTower_() {
