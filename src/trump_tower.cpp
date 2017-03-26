@@ -32,28 +32,34 @@ TrumpTower::~TrumpTower() {
         delete sjw_.front();
         sjw_.pop_front();
     }
-    // delete [] sjw_;
 
     while(reporter_.size() != 0){
         delete reporter_.top();
         reporter_.pop();
     }
-    // delete [] reporter_;
 
     for(std::set<Actor*, WahmbulanceCmp>::iterator iter=wahmbulance_.begin();
             iter!=wahmbulance_.end(); iter++){
         delete *iter;
         wahmbulance_.erase(iter);
     }
-    // delete [] wahmbulance_;
 
     while(choppa_.size() != 0){
         delete choppa_.front();
         choppa_.pop();
     }
-    // delete [] choppa_;
 
+    while(enemy_->size(Direction::EAST) != 0){
+        delete enemy_->front(Direction::EAST);
+        enemy_->remove(Direction::EAST);
+    }
 
+    while(enemy_->size(Direction::WEST) != 0){
+        delete enemy_->front(Direction::WEST);
+        enemy_->remove(Direction::WEST);
+    }
+
+    delete enemy_;
 }
 
 void TrumpTower::buildTrumpTower_() {
@@ -143,17 +149,15 @@ void TrumpTower::action() {
             if (((Hero *) curReporter)->defend(*donald)) {
                 std::cout << curReporter->victory(*donald) << std::endl;
                 std::cout << donald->defeat(*curReporter) << std::endl;
-                choppa_.push(curReporter);
-                delete reporter_.top();
-                reporter_.pop();
                 donald->defeat(*curReporter);
+                choppa_.push(curReporter);
+                reporter_.pop();
                 std::cout << curReporter->name() + " gets to da choppa!" << std::endl;
             } else {
                 std::cout << donald->victory(*curReporter) << std::endl;
                 std::cout << curReporter->defeat(*donald) << std::endl;
                 wahmbulance_.insert(curReporter);
                 // wahmbulance_.insert(curSJW);
-                delete reporter_.top();
                 reporter_.pop();
             }
         } else {
@@ -164,14 +168,12 @@ void TrumpTower::action() {
             wahmbulance_.insert(curSJW);
             wahmbulance_.insert(curReporter);
 
-            delete sjw_.front();
-            delete reporter_.top();
             sjw_.pop_front();
             reporter_.pop();
         }
     }
     printStatistics_();
-
+    delete donald;
 }
 
 void TrumpTower::printStatistics_(){
@@ -190,6 +192,7 @@ void TrumpTower::printStatistics_(){
               << " enemy/s remain in the east hallway:" << std::endl;
     while( enemy_->size(Direction::EAST) != 0){
         std::cout << "\t" + enemy_->front(Direction::EAST)->name() << std::endl;
+        delete enemy_->front(Direction::EAST);
         enemy_->remove(Direction::EAST);
     }
 
@@ -197,6 +200,7 @@ void TrumpTower::printStatistics_(){
               << " enemy/s remain in the west hallway:" << std::endl;
     while( enemy_->size(Direction::WEST) != 0){
         std::cout << "\t" + enemy_->front(Direction::WEST)->name() << std::endl;
+        delete enemy_->front(Direction::WEST);
         enemy_->remove(Direction::WEST);
     }
 
