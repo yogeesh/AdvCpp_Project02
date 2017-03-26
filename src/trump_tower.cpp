@@ -144,6 +144,7 @@ void TrumpTower::action() {
                 std::cout << curReporter->victory(*donald) << std::endl;
                 std::cout << donald->defeat(*curReporter) << std::endl;
                 choppa_.push(curReporter);
+                delete reporter_.top();
                 reporter_.pop();
                 donald->defeat(*curReporter);
                 std::cout << curReporter->name() + " gets to da choppa!" << std::endl;
@@ -152,6 +153,7 @@ void TrumpTower::action() {
                 std::cout << curReporter->defeat(*donald) << std::endl;
                 wahmbulance_.insert(curReporter);
                 // wahmbulance_.insert(curSJW);
+                delete reporter_.top();
                 reporter_.pop();
             }
         } else {
@@ -161,6 +163,9 @@ void TrumpTower::action() {
             enemy_->insert(curEnemy, curDir);
             wahmbulance_.insert(curSJW);
             wahmbulance_.insert(curReporter);
+
+            delete sjw_.front();
+            delete reporter_.top();
             sjw_.pop_front();
             reporter_.pop();
         }
@@ -173,6 +178,7 @@ void TrumpTower::printStatistics_(){
     std::cout << std::to_string(choppa_.size()) << " reporter/s made it to da choppa:" << std::endl;
     while( choppa_.size() != 0) {
         std::cout << "\t" + choppa_.front()->name() << std::endl;
+        delete choppa_.front();
         choppa_.pop();
     }
 
@@ -197,12 +203,14 @@ void TrumpTower::printStatistics_(){
     std::cout << std::to_string(reporter_.size()) + " reporter/s are left in the basement:" << std::endl;
     while( reporter_.size() != 0 ){
         std::cout << "\t" + reporter_.top()->name() << std::endl;
+        delete reporter_.top();
         reporter_.pop();
     }
 
     std::cout << std::to_string(sjw_.size()) + " SJW/s are chilling in their safe space:" << std::endl;
     while( sjw_.size() != 0){
         std::cout << "\t" + sjw_.front()->name() << std::endl;
+        delete sjw_.front();
         sjw_.pop_front();
     }
 }
